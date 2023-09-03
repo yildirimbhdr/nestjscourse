@@ -29,4 +29,18 @@ Nest.js projesi oluştururken ve yönetirken sık kullanılan terminal komutlar�
 
 - "DTO" kısaltması "Data Transfer Object" anlamına gelir. DTO'lar, gelen verinin hangi koşullarda ve hangi veri türünde olması gerektiğini belirlemek için kullanılır. Genellikle gelen isteklerin doğrulama ve işlenme süreçlerinde kullanılırlar.
 
+## Önerilen Paketler
+- `npm i --save class-validator class-transformer` : Validation işlemi yapmanı sağlar
+
+## Validatörler (class-validator)
+- Dtodaki değişkenlerin başına @IsInt() gibi decoratörler yazarak kullanabilirsiniz
+- Validator kullanacağınız apinin başına @UsePipes(ValidationPipe) decoratörü eklenmesi gerekli
+- Bir Dtonun içerisinde başka bir Dto daha alacaksanız @ValidateNested Decoratörü kullanılabilir ve aynı zamanda @Type(()=> Dto)  decoratörü ile o Dtonun türünü belirleyebilirsiniz
+
+## Exception filters
+- Nestjs in otomatik döndürdüğü exceptionları NotFoundException gibi, bizim istediğimiz şekilde döndürmesini sağlıyor
+
+
 Bu notlar, Nest.js ile ilgili önemli kavramları ve kullanımı hakkında bilgi vermektedir. Projelerinizde bu kavramları ve yönergeleri kullanarak Nest.js'i daha etkili bir şekilde kullanabilirsiniz.
+
+
